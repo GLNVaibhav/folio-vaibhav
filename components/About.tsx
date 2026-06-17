@@ -48,7 +48,7 @@ export function About() {
               Currently, I&apos;m conducting research on <span className="font-semibold text-foreground">predictive modeling of customer churn</span> across multiple sectors, analyzing patterns and developing retention strategies backed by machine learning.
             </p>
             <p className="text-secondary text-lg leading-relaxed">
-              Beyond research, I&apos;m exploring entrepreneurship through ventures like <span className="font-semibold text-foreground">BeyondBreathe</span> (healthcare), <span className="font-semibold text-foreground">LACHOS</span> (fashion tech), and <span className="font-semibold text-foreground">CivicPay</span> (fintech)—each addressing real-world gaps in their domains.
+              Beyond research, I&apos;m driven by <span className="font-semibold text-foreground">startup ideologies</span>—building solutions like <span className="font-semibold text-foreground">BeyondBreathe</span> (healthcare), <span className="font-semibold text-foreground">LACHOS</span> (fashion tech), and <span className="font-semibold text-foreground">CivicPay</span> (fintech). Each project bridges real-world problems with technology, guided by a lean mindset and user-centric approach.
             </p>
             <p className="text-secondary text-lg leading-relaxed">
               My professional experience at Sree Satyata Consulting reinforced my interest in business operations, process optimization, and MIS-level decision making—skills that directly inform how I approach product development.
@@ -103,7 +103,7 @@ export function About() {
                 <li>🎓 B.Tech CSE + Management Minor @ SRM University AP</li>
                 <li>🔬 Ongoing Research Internship (ML)</li>
                 <li>💼 Experience: Business Operations & Analysis</li>
-                <li>🚀 Building: 3+ Startup Ventures</li>
+                <li>🚀 Ideology: Building with startup mentality</li>
               </ul>
             </div>
           </motion.div>

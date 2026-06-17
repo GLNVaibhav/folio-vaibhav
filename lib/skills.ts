@@ -21,6 +21,10 @@ export const skillsData: SkillCategory[] = [
     skills: ["Pandas", "Scikit-learn", "Data Analysis", "Statistical Modeling", "Feature Engineering", "Exploratory Data Analysis"],
   },
   {
+    category: "Business & Management (Minor)",
+    skills: ["Leadership", "Negotiation", "Power Dynamics", "Strategic Thinking", "Stakeholder Management", "Decision Making"],
+  },
+  {
     category: "Tools & Platforms",
     skills: ["Git", "GitHub", "VS Code", "Postman", "AWS", "Vercel", "Docker"],
   },

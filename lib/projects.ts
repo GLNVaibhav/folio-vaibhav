@@ -7,6 +7,7 @@ export interface Project {
   link?: string;
   github?: string;
   featured?: boolean;
+  entrepreneurship?: boolean;
 }
 
 export const projects: Project[] = [
@@ -18,6 +19,7 @@ export const projects: Project[] = [
     technologies: ["React.js", "Node.js", "MongoDB", "JWT", "TailwindCSS", "React Query"],
     github: "https://github.com/GLNVaibhav",
     featured: true,
+    entrepreneurship: true,
   },
   {
     id: "resume-shortlisting",
@@ -26,6 +28,7 @@ export const projects: Project[] = [
     description: "Automated applicant screening system that ranks resumes using keyword-matching and filtering logic, significantly reducing manual screening effort and improving hiring efficiency.",
     technologies: ["Python", "Pandas", "NLP", "Data Processing", "Automation"],
     featured: true,
+    entrepreneurship: true,
   },
   {
     id: "business-analysis-agent",
@@ -34,6 +37,7 @@ export const projects: Project[] = [
     description: "An AI-powered system that converts raw business data into structured, actionable insights, identifying inefficiencies and providing strategic recommendations for decision-making.",
     technologies: ["Python", "Data Analysis", "Machine Learning", "System Design", "Analytics"],
     featured: true,
+    entrepreneurship: true,
   },
   {
     id: "healthqueue",
@@ -42,6 +46,7 @@ export const projects: Project[] = [
     description: "A priority-queue-based healthcare scheduling system that optimizes patient handling based on urgency using efficient data structures and scheduling algorithms.",
     technologies: ["DSA", "Priority Queues", "Algorithms", "System Design"],
     featured: true,
+    entrepreneurship: true,
   },
 ];
 

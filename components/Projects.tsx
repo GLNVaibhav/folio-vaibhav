@@ -52,9 +52,16 @@ export function Projects() {
 
               <div className="relative z-10">
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
-                    {project.title}
-                  </h3>
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                      {project.title}
+                    </h3>
+                    {project.entrepreneurship && (
+                      <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold whitespace-nowrap">
+                        🚀 Startup Idea
+                      </span>
+                    )}
+                  </div>
                   <p className="text-foreground/70 text-sm leading-relaxed">
                     {project.description}
                   </p>

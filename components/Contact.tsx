@@ -6,6 +6,12 @@ import Link from 'next/link';
 export function Contact() {
   const contactInfo = [
     {
+      icon: '📄',
+      label: 'Resume',
+      value: 'View My Resume',
+      href: '/resume.pdf',
+    },
+    {
       icon: '✉️',
       label: 'Email',
       value: 'glnvaibhav@gmail.com',
@@ -52,7 +58,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
           {contactInfo.map((info, index) => (
             <motion.a

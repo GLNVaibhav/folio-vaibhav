@@ -13,6 +13,12 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ];
 
+const resumeLink = {
+  label: 'Resume',
+  href: '/resume.pdf',
+  external: true,
+};
+
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -35,7 +41,7 @@ export function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-12">
+          <div className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.href}
@@ -51,6 +57,22 @@ export function Navigation() {
                 </Link>
               </motion.div>
             ))}
+            
+            {/* Resume Button */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: navItems.length * 0.08 }}
+            >
+              <Link
+                href={resumeLink.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-primary text-white rounded-lg font-semibold text-sm hover:bg-primary/90 transition-colors duration-200"
+              >
+                {resumeLink.label}
+              </Link>
+            </motion.div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -103,6 +125,14 @@ export function Navigation() {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href={resumeLink.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block px-4 py-2 bg-primary text-white rounded-lg font-semibold text-center hover:bg-primary/90 transition-colors duration-200"
+              >
+                {resumeLink.label}
+              </Link>
             </div>
           </motion.div>
         )}

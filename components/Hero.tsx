@@ -125,8 +125,8 @@ export function Hero() {
                 <p className="text-sm text-secondary font-semibold mt-2">Full-Stack Apps</p>
               </div>
               <div>
-                <p className="text-4xl font-black text-primary">3</p>
-                <p className="text-sm text-secondary font-semibold mt-2">Startups</p>
+                <p className="text-4xl font-black text-primary">∞</p>
+                <p className="text-sm text-secondary font-semibold mt-2">Startup Mindset</p>
               </div>
             </motion.div>
           </motion.div>
