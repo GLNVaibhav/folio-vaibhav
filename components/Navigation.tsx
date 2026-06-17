@@ -6,9 +6,9 @@ import { useState } from 'react';
 
 const navItems = [
   { label: 'About', href: '#about' },
+  { label: 'Research', href: '#research' },
   { label: 'Experience', href: '#experience' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Research', href: '#research' },
   { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -20,32 +20,32 @@ export function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b-2 border-border"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-xl font-bold text-primary"
+              className="text-2xl font-black text-primary"
             >
-              Vaibhav
+              VG.
             </motion.div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-12">
             {navItems.map((item, index) => (
               <motion.div
                 key={item.href}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.08 }}
               >
                 <Link
                   href={item.href}
-                  className="text-foreground/70 hover:text-primary transition-colors duration-200 text-sm font-medium"
+                  className="text-secondary hover:text-primary font-semibold transition-colors duration-200 text-sm tracking-wide hover:scale-110 origin-bottom"
                 >
                   {item.label}
                 </Link>
@@ -55,8 +55,9 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-primary p-2 hover:bg-white rounded-lg transition-colors"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             <svg
               className="w-6 h-6"
@@ -68,14 +69,14 @@ export function Navigation() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={2.5}
                   d="M6 18L18 6M6 6l12 12"
                 />
               ) : (
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={2.5}
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               )}
@@ -89,14 +90,14 @@ export function Navigation() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-border"
+            className="md:hidden border-t-2 border-border bg-gradient-to-b from-background to-muted/50"
           >
-            <div className="px-4 py-4 space-y-3">
+            <div className="px-6 py-6 space-y-4">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block text-foreground/70 hover:text-primary transition-colors duration-200 text-sm font-medium"
+                  className="block text-secondary hover:text-primary font-semibold transition-colors duration-200 text-base"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
