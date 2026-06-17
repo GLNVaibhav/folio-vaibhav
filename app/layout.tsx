@@ -10,8 +10,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Vaibhav Gollamudi | Full-Stack Developer & ML Enthusiast',
-  description: 'Portfolio showcasing my full-stack development projects, machine learning research, and technical expertise.',
+  title: 'Vaibhav Gollamudi | CS Student, ML Researcher & Data-Driven Builder',
+  description: 'CS student building products with ML research focus and business acumen. Specializing in predictive analytics, full-stack development, and entrepreneurial ventures.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'dark',
+  colorScheme: 'light',
   themeColor: [
-    { media: '(prefers-color-scheme: dark)', color: '#0f1419' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
   ],
 }
 
@@ -45,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`dark bg-background ${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`bg-background ${geistSans.variable} ${geistMono.variable}`}>
       <body className="font-sans antialiased bg-background text-foreground">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

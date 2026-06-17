@@ -19,7 +19,7 @@ export function About() {
   };
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
+    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,7 +29,7 @@ export function About() {
           className="mb-12"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-2">About Me</h2>
-          <div className="w-12 h-1 bg-primary rounded-full" />
+          <div className="w-12 h-1 bg-blue-600 rounded-full" />
         </motion.div>
 
         <motion.div
@@ -41,58 +41,70 @@ export function About() {
         >
           {/* Text Content */}
           <motion.div variants={itemVariants} className="space-y-6">
-            <p className="text-foreground/80 text-lg leading-relaxed">
-              I&apos;m a passionate full-stack developer and machine learning enthusiast currently pursuing my B.Tech in Computer Science at SRM University AP. My journey combines technical excellence with entrepreneurial mindset.
+            <p className="text-secondary text-lg leading-relaxed">
+              I&apos;m a second-year CS student at SRM University AP with a passion for building data-driven solutions. My approach combines technical depth with business acumen—I don&apos;t just build features, I understand the problems they solve.
             </p>
-            <p className="text-foreground/80 text-lg leading-relaxed">
-              With expertise in the MERN stack, I build scalable web applications that solve real problems. Simultaneously, I&apos;m diving deep into machine learning, currently researching predictive models for customer churn analysis across multiple sectors.
+            <p className="text-secondary text-lg leading-relaxed">
+              Currently, I&apos;m conducting research on <span className="font-semibold text-foreground">predictive modeling of customer churn</span> across multiple sectors, analyzing patterns and developing retention strategies backed by machine learning.
             </p>
-            <p className="text-foreground/80 text-lg leading-relaxed">
-              As a Business & Operations Intern at Sree Satyata Consulting, I&apos;ve developed skills in strategic analysis, market research, and project management that complement my technical expertise.
+            <p className="text-secondary text-lg leading-relaxed">
+              Beyond research, I&apos;m exploring entrepreneurship through ventures like <span className="font-semibold text-foreground">BeyondBreathe</span> (healthcare), <span className="font-semibold text-foreground">LACHOS</span> (fashion tech), and <span className="font-semibold text-foreground">CivicPay</span> (fintech)—each addressing real-world gaps in their domains.
+            </p>
+            <p className="text-secondary text-lg leading-relaxed">
+              My professional experience at Sree Satyata Consulting reinforced my interest in business operations, process optimization, and MIS-level decision making—skills that directly inform how I approach product development.
             </p>
           </motion.div>
 
-          {/* Stats/Info */}
+          {/* Core Focus Areas */}
           <motion.div
             variants={itemVariants}
-            className="space-y-6 bg-background rounded-lg p-8 border border-border"
+            className="space-y-6 bg-muted rounded-xl p-8 border border-border"
           >
-            <div className="space-y-4">
+            <h3 className="text-2xl font-bold text-foreground mb-6">Core Focus Areas</h3>
+
+            <div className="space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
+                <div className="w-3 h-3 rounded-full bg-blue-600 mt-2 flex-shrink-0" />
                 <div>
-                  <h3 className="text-primary font-semibold mb-1">Education</h3>
-                  <p className="text-foreground/70">B.Tech CSE, SRM University AP</p>
-                  <p className="text-foreground/60 text-sm">Minor in Management</p>
+                  <h4 className="text-blue-600 font-semibold mb-1">ML & Predictive Analytics</h4>
+                  <p className="text-secondary text-sm">Customer churn, pattern recognition, feature engineering</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
+                <div className="w-3 h-3 rounded-full bg-blue-600 mt-2 flex-shrink-0" />
                 <div>
-                  <h3 className="text-primary font-semibold mb-1">Current Role</h3>
-                  <p className="text-foreground/70">Research Intern</p>
-                  <p className="text-foreground/60 text-sm">ML & Customer Churn Analysis</p>
+                  <h4 className="text-blue-600 font-semibold mb-1">Full-Stack Development</h4>
+                  <p className="text-secondary text-sm">React, Node.js, MongoDB, scalable architecture</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
+                <div className="w-3 h-3 rounded-full bg-blue-600 mt-2 flex-shrink-0" />
                 <div>
-                  <h3 className="text-primary font-semibold mb-1">Expertise</h3>
-                  <p className="text-foreground/70">Full-Stack Development</p>
-                  <p className="text-foreground/60 text-sm">React, Node.js, ML & Data Analysis</p>
+                  <h4 className="text-blue-600 font-semibold mb-1">Business Analysis</h4>
+                  <p className="text-secondary text-sm">Data-driven insights, process optimization, strategy</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-3 h-3 rounded-full bg-primary mt-2 flex-shrink-0" />
+                <div className="w-3 h-3 rounded-full bg-blue-600 mt-2 flex-shrink-0" />
                 <div>
-                  <h3 className="text-primary font-semibold mb-1">Location</h3>
-                  <p className="text-foreground/70">India</p>
-                  <p className="text-foreground/60 text-sm">Andhra Pradesh</p>
+                  <h4 className="text-blue-600 font-semibold mb-1">Entrepreneurship</h4>
+                  <p className="text-secondary text-sm">Product ideation, healthcare, fintech, fashion tech</p>
                 </div>
               </div>
+            </div>
+
+            <div className="border-t border-border pt-6 mt-8">
+              <h4 className="text-foreground font-semibold mb-4">Quick Facts</h4>
+              <ul className="space-y-2 text-sm text-secondary">
+                <li>📍 Based in India (Andhra Pradesh)</li>
+                <li>🎓 B.Tech CSE + Management Minor @ SRM University AP</li>
+                <li>🔬 Ongoing Research Internship (ML)</li>
+                <li>💼 Experience: Business Operations & Analysis</li>
+                <li>🚀 Building: 3+ Startup Ventures</li>
+              </ul>
             </div>
           </motion.div>
         </motion.div>
