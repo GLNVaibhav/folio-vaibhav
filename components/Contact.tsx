@@ -9,7 +9,7 @@ export function Contact() {
       icon: '📄',
       label: 'Resume',
       value: 'View My Resume',
-      href: '/resume.pdf',
+      href: 'https://blobs.vusercontent.net/blob/Vaibhav_Gollamudi-Resume%28Final%29-MqKMWBPAriNgE92K3bSm3ojMhtDmbB.pdf',
     },
     {
       icon: '✉️',
@@ -64,8 +64,8 @@ export function Contact() {
             <motion.a
               key={info.label}
               href={info.href}
-              target={info.href.startsWith('http') ? '_blank' : undefined}
-              rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              target={'_blank'}
+              rel={'noopener noreferrer'}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: index * 0.1 }}

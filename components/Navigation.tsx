@@ -15,7 +15,7 @@ const navItems = [
 
 const resumeLink = {
   label: 'Resume',
-  href: '/resume.pdf',
+  href: 'https://blobs.vusercontent.net/blob/Vaibhav_Gollamudi-Resume%28Final%29-MqKMWBPAriNgE92K3bSm3ojMhtDmbB.pdf',
   external: true,
 };
 
