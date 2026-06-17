@@ -1,11 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 
 export function Hero() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,7 +16,7 @@ export function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -77,7 +77,7 @@ export function Hero() {
               variants={itemVariants}
               className="text-xl md:text-2xl font-semibold text-secondary leading-relaxed max-w-lg"
             >
-              CS Student | ML Researcher <br /> Data-Driven Builder
+              AI Researcher • HealthTech Entrepreneur • Full-Stack Developer
             </motion.p>
 
             {/* Description */}
@@ -85,8 +85,24 @@ export function Hero() {
               variants={itemVariants}
               className="text-lg text-secondary leading-relaxed max-w-md"
             >
-              Building intelligent systems with predictive analytics at their core. Currently diving deep into customer churn modeling and crafting products that solve real-world problems.
+              Building impactful solutions at the intersection of Healthcare, AI, and Business.
             </motion.p>
+
+            <motion.div variants={itemVariants} className="flex flex-wrap gap-3">
+              {[
+                "🚧 Building BeyondBreathe",
+                "🔬 Research Intern – Customer Churn Prediction",
+                "🎓 B.Tech CSE @ SRM University AP",
+              ].map((badge) => (
+                <motion.span
+                  key={badge}
+                  whileHover={{ y: -2 }}
+                  className="px-3 py-2 rounded-full text-sm font-semibold bg-card border border-border text-foreground/80"
+                >
+                  {badge}
+                </motion.span>
+              ))}
+            </motion.div>
 
             {/* CTA Buttons */}
             <motion.div

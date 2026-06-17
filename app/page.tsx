@@ -1,5 +1,6 @@
 import { Navigation } from '@/components/Navigation';
 import { Hero } from '@/components/Hero';
+import { CurrentlyBuilding } from '@/components/CurrentlyBuilding';
 import { About } from '@/components/About';
 import { ResearchProject } from '@/components/ResearchProject';
 import { Experience } from '@/components/Experience';
@@ -14,6 +15,7 @@ export default function Page() {
     <main className="min-h-screen bg-background overflow-hidden">
       <Navigation />
       <Hero />
+      <CurrentlyBuilding />
       <About />
       <ResearchProject />
       <Experience />

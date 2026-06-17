@@ -1,9 +1,36 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { ExternalLink, FolderGit2 } from 'lucide-react';
 import { projects } from '@/lib/projects';
 
 export function Projects() {
+  const featuredPriority = ["beyondbreathe", "village-connect", "customer-churn-prediction", "business-analysis-agent"];
+  const statusClasses = {
+    startup: "bg-purple-500/15 text-purple-600 dark:text-purple-300 border-purple-500/30",
+    research: "bg-blue-500/15 text-blue-600 dark:text-blue-300 border-blue-500/30",
+    ongoing: "bg-yellow-500/15 text-yellow-700 dark:text-yellow-300 border-yellow-500/30",
+    completed: "bg-green-500/15 text-green-700 dark:text-green-300 border-green-500/30",
+  } as const;
+
+  const sortedProjects = [...projects].sort((a, b) => {
+    if (a.featured !== b.featured) {
+      return a.featured ? -1 : 1;
+    }
+
+    if (a.featured && b.featured) {
+      const aIndex = featuredPriority.indexOf(a.id);
+      const bIndex = featuredPriority.indexOf(b.id);
+      const resolvedA = aIndex === -1 ? Number.MAX_SAFE_INTEGER : aIndex;
+      const resolvedB = bIndex === -1 ? Number.MAX_SAFE_INTEGER : bIndex;
+      if (resolvedA !== resolvedB) {
+        return resolvedA - resolvedB;
+      }
+    }
+
+    return 0;
+  });
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -40,7 +67,7 @@ export function Projects() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
         >
-          {projects.map((project) => (
+          {sortedProjects.map((project) => (
             <motion.div
               key={project.id}
               variants={itemVariants}
@@ -51,17 +78,22 @@ export function Projects() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="relative z-10">
+                {project.status && (
+                  <span
+                    className={`inline-flex px-3 py-1 rounded-full text-xs font-semibold border mb-4 ${
+                      statusClasses[project.status]
+                    }`}
+                  >
+                    {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
+                  </span>
+                )}
                 <div className="mb-6">
                   <div className="flex items-start justify-between gap-3 mb-3">
                     <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h3>
-                    {project.entrepreneurship && (
-                      <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold whitespace-nowrap">
-                        🚀 Startup Idea
-                      </span>
-                    )}
                   </div>
+                  <p className="text-foreground/60 text-xs font-semibold uppercase tracking-wide mb-3">{project.category}</p>
                   <p className="text-foreground/70 text-sm leading-relaxed">
                     {project.description}
                   </p>
@@ -86,25 +118,16 @@ export function Projects() {
 
                 {/* Links */}
                 <div className="flex gap-3 pt-6 border-t border-border">
-                  {project.github && (
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05 }}
-                      className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-200 text-sm font-medium"
-                    >
-                      GitHub
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                    </motion.a>
-                  )}
+                  <motion.a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-200 text-sm font-medium"
+                  >
+                    <FolderGit2 className="w-4 h-4" />
+                    GitHub Repository
+                  </motion.a>
                   {project.link && (
                     <motion.a
                       href={project.link}
@@ -113,15 +136,8 @@ export function Projects() {
                       whileHover={{ scale: 1.05 }}
                       className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-200 text-sm font-medium"
                     >
+                      <ExternalLink className="w-4 h-4" />
                       Live Demo
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
                     </motion.a>
                   )}
                 </div>
