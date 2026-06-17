@@ -17,7 +17,7 @@ export const projects: Project[] = [
     category: "Full-Stack Development",
     description: "A comprehensive full-stack platform empowering rural communities across agriculture, healthcare, education, and grievance management with role-based access and admin dashboard.",
     technologies: ["React.js", "Node.js", "MongoDB", "JWT", "TailwindCSS", "React Query"],
-    github: "https://github.com/GLNVaibhav",
+    github: "https://github.com/GLNVaibhav/Village-Connect",
     featured: true,
   },
   {
@@ -34,7 +34,9 @@ export const projects: Project[] = [
     category: "AI | Business Intelligence",
     description: "An AI-powered system that converts raw business data into structured, actionable insights, identifying inefficiencies and providing strategic recommendations for decision-making.",
     technologies: ["Python", "Data Analysis", "Machine Learning", "System Design", "Analytics"],
+    github: "https://github.com/sweeyamsrmap/sweeyam_team26",
     featured: true,
+    status: "ongoing"
   },
   {
     id: "healthqueue",
@@ -42,6 +44,7 @@ export const projects: Project[] = [
     category: "DSA | Healthcare",
     description: "A priority-queue-based healthcare scheduling system that optimizes patient handling based on urgency using efficient data structures and scheduling algorithms.",
     technologies: ["DSA", "Priority Queues", "Algorithms", "System Design"],
+    github: "https://github.com/GLNVaibhav/Greedy-Algo",
     featured: true,
   },
   {
@@ -50,8 +53,10 @@ export const projects: Project[] = [
     category: "Healthcare Startup",
     description: "A healthcare startup addressing respiratory health challenges with innovative technology solutions and user-centric design for real-world impact.",
     technologies: ["Healthcare", "Innovation", "Full-Stack"],
+    github: "https://github.com/GLNVaibhav/BeyondBreathe_MVP",
     featured: true,
     entrepreneurship: true,
+    status: "startup"
   },
   {
     id: "lachos",
@@ -68,6 +73,7 @@ export const projects: Project[] = [
     category: "Fintech Startup",
     description: "A fintech startup revolutionizing civic payments and financial accessibility, making financial services more accessible and efficient.",
     technologies: ["Fintech", "Payments", "Innovation"],
+    github: "https://github.com/GLNVaibhav/CivicPay_MVP",
     featured: true,
     entrepreneurship: true,
   },
