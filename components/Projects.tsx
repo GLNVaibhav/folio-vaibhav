@@ -5,7 +5,7 @@ import { ExternalLink, FolderGit2 } from 'lucide-react';
 import { projects } from '@/lib/projects';
 
 export function Projects() {
-  const featuredPriority = ["beyondbreathe", "village-connect", "customer-churn-prediction", "business-analysis-agent"];
+  const featuredPriority = ["beyondbreathe", "village-connect", "business-analysis-agent"];
   const statusClasses = {
     startup: "bg-purple-500/15 text-purple-600 dark:text-purple-300 border-purple-500/30",
     research: "bg-blue-500/15 text-blue-600 dark:text-blue-300 border-blue-500/30",
@@ -118,16 +118,26 @@ export function Projects() {
 
                 {/* Links */}
                 <div className="flex gap-3 pt-6 border-t border-border">
+                  {(() => {
+                    const githubHref = project.github ?? "#";
+                    const hasGithub = Boolean(project.github);
+
+                    return (
                   <motion.a
-                    href={project.github}
+                    href={githubHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
-                    className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-200 text-sm font-medium"
+                    aria-disabled={!hasGithub}
+                    className={`inline-flex items-center gap-2 text-primary hover:text-accent transition-colors duration-200 text-sm font-medium ${
+                      !hasGithub ? "opacity-60 pointer-events-none" : ""
+                    }`}
                   >
                     <FolderGit2 className="w-4 h-4" />
                     GitHub Repository
                   </motion.a>
+                    );
+                  })()}
                   {project.link && (
                     <motion.a
                       href={project.link}

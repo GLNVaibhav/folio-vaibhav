@@ -5,7 +5,7 @@ export interface Project {
   technologies: string[];
   category: string;
   link?: string;
-  github: string;
+  github?: string;
   status?: "startup" | "research" | "ongoing" | "completed";
   featured?: boolean;
 }
