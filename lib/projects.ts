@@ -8,6 +8,8 @@ export interface Project {
   github?: string;
   featured?: boolean;
   entrepreneurship?: boolean;
+  status?: string;
+  ventureType?: "incubation" | "concept";
 }
 
 export const projects: Project[] = [
@@ -48,35 +50,41 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "beyondbreathe",
-    title: "BeyondBreathe",
-    category: "Healthcare Startup",
-    description: "A healthcare startup addressing respiratory health challenges with innovative technology solutions and user-centric design for real-world impact.",
-    technologies: ["Healthcare", "Innovation", "Full-Stack"],
-    github: "https://github.com/GLNVaibhav/BeyondBreathe_MVP",
-    featured: true,
-    entrepreneurship: true,
-    status: "startup"
+  id: "beyondbreathe",
+  title: "BeyondBreathe",
+  category: "Healthcare Startup",
+  description:
+    "A healthcare startup addressing respiratory health challenges with innovative technology solutions and user-centric design for real-world impact.",
+  technologies: ["Healthcare", "Innovation", "Full-Stack"],
+  github: "https://github.com/GLNVaibhav/BeyondBreathe_MVP",
+  featured: true,
+  entrepreneurship: true,
+  status: "startup",
+  ventureType: "incubation",
   },
   {
     id: "lachos",
-    title: "LACHOS",
-    category: "Fashion Technology Startup",
-    description: "A fashion-tech startup bridging the gap between traditional fashion and modern technology, creating innovative solutions for the fashion industry.",
-    technologies: ["Fashion Tech", "E-commerce", "Innovation"],
-    featured: true,
-    entrepreneurship: true,
+  title: "LACHOS",
+  category: "Fashion Technology Venture",
+  description:
+    "A fashion-tech venture concept bridging traditional fashion and modern technology through customization, personalization, and digital experiences.",
+  technologies: ["Fashion Tech", "E-commerce", "Innovation"],
+  featured: true,
+  entrepreneurship: true,
+  ventureType: "concept",
   },
   {
-    id: "civicpay",
-    title: "CivicPay",
-    category: "Fintech Startup",
-    description: "A fintech startup revolutionizing civic payments and financial accessibility, making financial services more accessible and efficient.",
-    technologies: ["Fintech", "Payments", "Innovation"],
-    github: "https://github.com/GLNVaibhav/CivicPay_MVP",
-    featured: true,
-    entrepreneurship: true,
-  },
+  id: "civicpay",
+  title: "CivicPay",
+  category: "FinTech Venture",
+  description:
+    "A civic-finance venture concept focused on simplifying tax, insurance, and public utility payments through a unified digital platform.",
+  technologies: ["Fintech", "Payments", "Innovation"],
+  github: "https://github.com/GLNVaibhav/CivicPay_MVP",
+  featured: true,
+  entrepreneurship: true,
+  ventureType: "concept",
+},
 ];
 
 export const researchProject = {
