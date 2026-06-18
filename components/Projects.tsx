@@ -71,11 +71,25 @@ export function Projects() {
                     </h3>
 
                     <div className="flex flex-col items-end gap-2">
-                      {project.entrepreneurship && (
-                        <span className="px-3 py-1 bg-accent/20 text-accent rounded-full text-xs font-semibold whitespace-nowrap">
-                          🚀 Startup Idea
-                        </span>
-                      )}
+                      <div className="flex gap-2 flex-wrap">
+  {project.ventureType === "incubation" && (
+    <span className="px-3 py-1 bg-green-500/15 text-green-600 rounded-full text-xs font-semibold whitespace-nowrap">
+      🚀 Incubation Candidate
+    </span>
+  )}
+
+  {project.ventureType === "concept" && (
+    <span className="px-3 py-1 bg-purple-500/15 text-purple-600 rounded-full text-xs font-semibold whitespace-nowrap">
+      💡 Entrepreneurial Venture
+    </span>
+  )}
+
+  {project.status === "ongoing" && (
+    <span className="px-3 py-1 bg-blue-500/15 text-blue-600 rounded-full text-xs font-semibold whitespace-nowrap">
+      🔄 Ongoing
+    </span>
+  )}
+</div>
 
                       {project.status && (
                         <span
