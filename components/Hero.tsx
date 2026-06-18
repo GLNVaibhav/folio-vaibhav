@@ -170,7 +170,7 @@ export function Hero() {
               {/* Image Card */}
               <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl border border-primary/20 bg-card">
                 <Image
-                  src="/Pictures/Vaibhav.jpeg"
+                  src="/vaibhav.png"
                   alt="Vaibhav Gollamudi"
                   fill
                   priority
