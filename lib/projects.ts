@@ -28,6 +28,7 @@ export const projects: Project[] = [
     category: "Python | Pandas | NLP",
     description: "Automated applicant screening system that ranks resumes using keyword-matching and filtering logic, significantly reducing manual screening effort and improving hiring efficiency.",
     technologies: ["Python", "Pandas", "NLP", "Data Processing", "Automation"],
+    github: "https://github.com/GLNVaibhav/Resume_Shortlisting",
     featured: true,
   },
   {
