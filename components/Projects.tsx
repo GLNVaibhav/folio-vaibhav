@@ -80,7 +80,7 @@ export function Projects() {
 
   {project.ventureType === "concept" && (
     <span className="px-3 py-1 bg-purple-500/15 text-purple-600 rounded-full text-xs font-semibold whitespace-nowrap">
-      💡 Entrepreneurial Venture
+      💡 Entrepreneurial Work
     </span>
   )}
 
