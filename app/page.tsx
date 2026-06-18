@@ -8,19 +8,31 @@ import { Skills } from '@/components/Skills';
 import { Education } from '@/components/Education';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
+import { CurrentlyBuilding } from '@/components/CurrentlyBuilding';
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-background overflow-hidden">
       <Navigation />
+
       <Hero />
-      <About />
-      <ResearchProject />
-      <Experience />
+
+      <CurrentlyBuilding />
+
       <Projects />
+
+      <ResearchProject />
+
+      <About />
+
+      <Experience />
+
       <Skills />
+
       <Education />
+
       <Contact />
+
       <Footer />
     </main>
   );
