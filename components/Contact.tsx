@@ -9,7 +9,7 @@ export function Contact() {
       icon: '📄',
       label: 'Resume',
       value: 'View My Resume',
-      href: 'https://blobs.vusercontent.net/blob/Vaibhav_Gollamudi-Resume%28Final%29-MqKMWBPAriNgE92K3bSm3ojMhtDmbB.pdf',
+      href: 'https://blobs.vusercontent.net/blob/Vaibhav_Resume-hjdvxyiCJ7tcny1B1UpHe37HU19oYc.pdf',
     },
     {
       icon: '✉️',
