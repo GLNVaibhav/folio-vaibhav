@@ -16,7 +16,6 @@ export const experience: Experience[] = [
     role: "Business & Operations Intern",
     startDate: "May 2024",
     endDate: "Dec 2025",
-    current: true,
     description: [
       "Led business operations and strategy initiatives for consulting engagements",
       "Conducted market research and competitive analysis for client projects",
@@ -30,7 +29,7 @@ export const experience: Experience[] = [
     id: "research-internship",
     company: "SRM University AP",
     role: "Research Intern",
-    startDate: "2025",
+    startDate: "May-2026",
     endDate: "Present",
     current: true,
     description: [
