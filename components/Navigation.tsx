@@ -15,7 +15,7 @@ const navItems = [
 
 const resumeLink = {
   label: 'Resume',
-  href: 'https://blobs.vusercontent.net/blob/Vaibhav_Resume-hjdvxyiCJ7tcny1B1UpHe37HU19oYc.pdf',
+  href: 'https://blobs.vusercontent.net/blob/Vaibhav_Resume-3cADDLZN2VIyCV0SCmjAEv4qxasZ4L.pdf',
   external: true,
 };
 
