@@ -98,13 +98,16 @@ export function ResearchProject() {
                 </div>
               </div>
 
-              <motion.button
+              <motion.a
+                href="https://churn-prediction-gray-delta.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
+                className="block w-full py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200 text-center"
               >
                 View Research Details
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
         </motion.div>

@@ -9,7 +9,7 @@ export function Contact() {
       icon: '📄',
       label: 'Resume',
       value: 'View My Resume',
-      href: 'https://blobs.vusercontent.net/blob/Vaibhav_Resume-hjdvxyiCJ7tcny1B1UpHe37HU19oYc.pdf',
+      href: 'https://blobs.vusercontent.net/blob/Vaibhav_Resume-3cADDLZN2VIyCV0SCmjAEv4qxasZ4L.pdf',
     },
     {
       icon: '✉️',
